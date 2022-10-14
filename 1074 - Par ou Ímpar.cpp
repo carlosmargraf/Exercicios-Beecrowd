@@ -4,7 +4,40 @@ using namespace std;
 
 int main(int argc, char const *argv[])
 {
+    int N, valor, x;
     
+    cin >> N;    
+    for(x = 0; x < N; x++)
+    {
+        cin >> valor;
+        if(valor == 0)
+        {
+            cout << "NULL" << endl;
+        }
+        else if(valor %2 == 0)
+        {
+            if(valor >0)
+            {
+                cout << "EVEN POSITIVE" << endl;
+            }
+            else
+            {
+                cout << "EVEN NEGATIVE" << endl;
+            }
+        }
+        else
+        {
+            if(valor > 0)
+            {
+                cout << "ODD POSITIVE" << endl;
+            }
+            else
+            {
+                cout << "ODD NEGATIVE" << endl;
+            }
+        }
+                
+    }
     return 0;
 }
 //Leia um valor inteiro N. Este valor será a quantidade de valores que serão lidos em seguida. 
@@ -12,22 +45,20 @@ int main(int argc, char const *argv[])
 //ímpar (ODD), positivo (POSITIVE) ou negativo (NEGATIVE). No caso do valor ser igual a 
 //zero (0), embora a descrição correta seja (EVEN NULL), pois por definição zero é par, seu 
 //programa deverá imprimir apenas NULL.
-Entrada
 
-A primeira linha da entrada contém um valor inteiro N(N < 10000) que indica o número de casos de teste. Cada caso de teste a seguir é um valor inteiro X (-107 < X <107).
-Saída
+//Entrada
+//A primeira linha da entrada contém um valor inteiro N(N < 10000) que indica o número de 
+//casos de teste. Cada caso de teste a seguir é um valor inteiro X (-107 < X <107).
 
-Para cada caso, imprima uma mensagem correspondente, de acordo com o exemplo abaixo. Todas as letras deverão ser maiúsculas e sempre deverá haver um espaço entre duas palavras impressas na mesma linha.
-Exemplo de Entrada 	Exemplo de Saída
+//Saída
+//Para cada caso, imprima uma mensagem correspondente, de acordo com o exemplo abaixo. 
+//Todas as letras deverão ser maiúsculas e sempre deverá haver um espaço entre duas palavras 
+//impressas na mesma linha.
 
-4
--5
-0
-3
--4
-	
+//Exemplo de Entrada 	Exemplo de Saída
 
-ODD NEGATIVE
-NULL
-ODD POSITIVE
-EVEN NEGATIVE
+//   4                    
+//  -5                    ODD NEGATIVE
+//   0                    NULL
+//   3                    ODD POSITIVE
+//  -4                    EVEN NEGATIVE
